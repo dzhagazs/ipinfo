@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '13.0'
+
+target 'ipinfo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+    # Networking
+    pod 'Alamofire', '~> 5.3.0'
+    
+    # Layout
+    pod 'TinyConstraints', '~> 4.0.1'
+    
+    # Static assets
+    pod 'R.swift', '~> 5.2.0'
+
+end
