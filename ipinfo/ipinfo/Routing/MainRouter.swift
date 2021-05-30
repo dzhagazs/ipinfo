@@ -7,14 +7,6 @@
 
 import UIKit
 
-enum MainRoute {
-    case ipDetails(context: IPSearchResultModel)
-}
-
-protocol MainRouteHandler: AnyObject {
-    func handle(route: MainRoute)
-}
-
 // Manages main navigation stack
 class MainRouter: Router, MainRouteHandler {
     

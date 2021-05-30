@@ -16,7 +16,7 @@ class MainViewModel: MainViewModelProtocol {
     private var title: String = "API Demo"
     private var subtitle: String = "Search any IP address"
     private var searchButtonTitle: String = "Search"
-    private var searchTerm: String = ""
+    private(set) var searchTerm: String = ""
     
     init(validator: InputValidator = IpAddressInputValidator(), ipApi: IPAPIProtocol, routeHandler: MainRouteHandler?) {
         self.validator = validator
@@ -39,12 +39,16 @@ class MainViewModel: MainViewModelProtocol {
         return validator.shouldHandle(input: text)
     }
     
-    func handleInput(text: String) {
+    func handleInput(text: String) throws {
+        if validator.shouldHandle(input: text) == false {
+            throw ErrorConstants.invalidInput
+        }
         searchTerm = text
         presenter?.setSearch(enabled: validator.isValid(input: text))
     }
     
     func searchAction() {
+        guard validator.isValid(input: searchTerm) else { return }
         presenter?.showLoadingIndicator()
         ipApi.searchIP(with: searchTerm) { [weak self] result in
             self?.handle(searchResult: result)
@@ -59,26 +63,5 @@ class MainViewModel: MainViewModelProtocol {
             case .failure(let error):
                 print(error)
         }
-    }
-}
-
-class IpAddressInputValidator: InputValidator {
-    
-    private let regex: NSRegularExpression
-    private let charSet: CharacterSet
-    
-    init() {
-        regex = try! NSRegularExpression(pattern: "^((25[0-5]|(2[0-4]|1[0-9]|[1-9]|)[0-9])(\\.(?!$)|$)){4}$")
-        charSet = CharacterSet.decimalDigits.union(CharacterSet(charactersIn: "."))
-    }
-    
-    // MARK: InputValidator
-    
-    func isValid(input: String) -> Bool {
-        return regex.firstMatch(in: input, options: [], range: NSRange(location: 0, length: input.count))?.range == NSRange(location: 0, length: input.count)
-    }
-    
-    func shouldHandle(input: String) -> Bool {
-        return CharacterSet(charactersIn: input).isSubset(of: charSet)
     }
 }

@@ -19,7 +19,13 @@ class MainViewController: UIViewController, MainViewModelPresenter, UITextFieldD
         }
     }
     @IBOutlet weak var searchButton: UIButton!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
+        didSet {
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.stopAnimating()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,11 +67,13 @@ class MainViewController: UIViewController, MainViewModelPresenter, UITextFieldD
     }
     
     func showLoadingIndicator() {
-        
+        activityIndicator.startAnimating()
+        searchButton.isUserInteractionEnabled = false
     }
     
     func hideLoadingIndicator() {
-        
+        activityIndicator.stopAnimating()
+        searchButton.isUserInteractionEnabled = true
     }
     
     // MARK: UITextFieldDelegate
@@ -74,8 +82,13 @@ class MainViewController: UIViewController, MainViewModelPresenter, UITextFieldD
         guard let result = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
         let shouldHandle = viewModel?.shouldHandleInput(text: result) ?? false
         if shouldHandle {
-            viewModel?.handleInput(text: result)
+            try? viewModel?.handleInput(text: result)
         }
         return shouldHandle
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

@@ -69,9 +69,19 @@ extension IPDetailsRowModel: CellConfigurable {
     var reuseIdentifier: String { cellReuseIdentifier }
     
     func configure(cell: UITableViewCell) {
-        let attrText = NSMutableAttributedString(string: data.key + ": ", attributes: [.foregroundColor: UIColor.blue])
-        attrText.append(NSAttributedString(string: data.value, attributes: [.foregroundColor: UIColor.red]))
+        let attrText = NSMutableAttributedString(string: data.key + ": ", attributes: [.foregroundColor: UIColor.keyColor])
+        attrText.append(NSAttributedString(string: data.value.stringValue, attributes: [.foregroundColor: data.value.valueColor]))
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.attributedText = attrText
+    }
+}
+
+extension IPModelFieldValue {
+    var valueColor: UIColor {
+        switch self {
+            case .bool(_): return UIColor.boolValueColor
+            case .string(_): return UIColor.stringValueColor
+            case .number(_): return UIColor.numberValueColor
+        }
     }
 }

@@ -21,13 +21,17 @@ protocol MainViewModelPresenter: AnyObject {
 protocol MainViewModelProtocol {
     var routeHandler: MainRouteHandler? { get set }
     var presenter: MainViewModelPresenter? { get set }
+    var searchTerm: String { get }
     func viewDidLoad()
     func shouldHandleInput(text: String) -> Bool
-    func handleInput(text: String)
+    func handleInput(text: String) throws
     func searchAction()
 }
 
-protocol InputValidator {
-    func isValid(input: String) -> Bool
-    func shouldHandle(input: String) -> Bool
+enum MainRoute {
+    case ipDetails(context: IPSearchResultModel)
+}
+
+protocol MainRouteHandler: AnyObject {
+    func handle(route: MainRoute)
 }

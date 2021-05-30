@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A769B3B26621C8D00FD7817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769B3A26621C8D00FD7817 /* AppDelegate.swift */; };
-		1A769B3F26621C8D00FD7817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769B3E26621C8D00FD7817 /* ViewController.swift */; };
 		1A769B4226621C8D00FD7817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A769B4026621C8D00FD7817 /* Main.storyboard */; };
 		1A769B4426621C9000FD7817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A769B4326621C9000FD7817 /* Assets.xcassets */; };
 		1A769B4726621C9000FD7817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A769B4526621C9000FD7817 /* LaunchScreen.storyboard */; };
@@ -34,6 +33,19 @@
 		1A769BF12662BBEA00FD7817 /* IPDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769BF02662BBEA00FD7817 /* IPDetailsViewModel.swift */; };
 		1A769BF62662BF9600FD7817 /* IPDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769BF52662BF9600FD7817 /* IPDetailsViewController.swift */; };
 		1A769BFB2662C85000FD7817 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769BFA2662C85000FD7817 /* Constants.swift */; };
+		1A769C032663801B00FD7817 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769C022663801B00FD7817 /* UIColorExtension.swift */; };
+		1A769C082663842400FD7817 /* FlowManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769C072663842400FD7817 /* FlowManagerTests.swift */; };
+		1A769C0C2663844900FD7817 /* FlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769B802662204C00FD7817 /* FlowManager.swift */; };
+		1A769C10266384FA00FD7817 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769B862662210300FD7817 /* TypeAliases.swift */; };
+		1A769C1626638ACB00FD7817 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769C1526638ACB00FD7817 /* InputValidator.swift */; };
+		1A769C1E26638AED00FD7817 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769C1526638ACB00FD7817 /* InputValidator.swift */; };
+		1A769C2326638B1600FD7817 /* IpAddressInputValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769C2226638B1600FD7817 /* IpAddressInputValidatorTests.swift */; };
+		1A769C2E2663911F00FD7817 /* MainViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769BAE2662343100FD7817 /* MainViewModelProtocol.swift */; };
+		1A769C322663917700FD7817 /* IPSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769BD2266243CB00FD7817 /* IPSearchResultModel.swift */; };
+		1A769C39266391E400FD7817 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769B9F2662260000FD7817 /* MainViewModel.swift */; };
+		1A769C3D266391F300FD7817 /* IPAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769BC9266242AE00FD7817 /* IPAPIProtocol.swift */; };
+		1A769C422663922B00FD7817 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769C412663922B00FD7817 /* MainViewModelTests.swift */; };
+		1A769C46266394C100FD7817 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A769BFA2662C85000FD7817 /* Constants.swift */; };
 		42901CA07B532C14A5191B0E /* Pods_ipinfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBBB8E81DB348D4AF2A1BDC /* Pods_ipinfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +69,6 @@
 /* Begin PBXFileReference section */
 		1A769B3726621C8D00FD7817 /* ipinfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipinfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A769B3A26621C8D00FD7817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A769B3E26621C8D00FD7817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A769B4126621C8D00FD7817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A769B4326621C9000FD7817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A769B4626621C9000FD7817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +100,11 @@
 		1A769BF02662BBEA00FD7817 /* IPDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPDetailsViewModel.swift; sourceTree = "<group>"; };
 		1A769BF52662BF9600FD7817 /* IPDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPDetailsViewController.swift; sourceTree = "<group>"; };
 		1A769BFA2662C85000FD7817 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A769C022663801B00FD7817 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1A769C072663842400FD7817 /* FlowManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowManagerTests.swift; sourceTree = "<group>"; };
+		1A769C1526638ACB00FD7817 /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
+		1A769C2226638B1600FD7817 /* IpAddressInputValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpAddressInputValidatorTests.swift; sourceTree = "<group>"; };
+		1A769C412663922B00FD7817 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		1CBBB8E81DB348D4AF2A1BDC /* Pods_ipinfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ipinfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD800CE5DF4D22A86378F4B7 /* Pods-ipinfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipinfo.debug.xcconfig"; path = "Target Support Files/Pods-ipinfo/Pods-ipinfo.debug.xcconfig"; sourceTree = "<group>"; };
 		B2690AB4DBD6C90A69B8A1E4 /* Pods-ipinfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipinfo.release.xcconfig"; path = "Target Support Files/Pods-ipinfo/Pods-ipinfo.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +161,7 @@
 		1A769B3926621C8D00FD7817 /* ipinfo */ = {
 			isa = PBXGroup;
 			children = (
+				1A769C1426638A9C00FD7817 /* Helpers */,
 				1A769BD1266243AA00FD7817 /* Model */,
 				1A769BC82662426F00FD7817 /* Networking */,
 				1A769BBA2662391900FD7817 /* Generated */,
@@ -154,7 +171,6 @@
 				1A769B7F2662201400FD7817 /* Routing */,
 				1A769B7E2662200500FD7817 /* UI */,
 				1A769B3A26621C8D00FD7817 /* AppDelegate.swift */,
-				1A769B3E26621C8D00FD7817 /* ViewController.swift */,
 				1A769B4326621C9000FD7817 /* Assets.xcassets */,
 				1A769B4526621C9000FD7817 /* LaunchScreen.storyboard */,
 				1A769B4826621C9000FD7817 /* Info.plist */,
@@ -167,6 +183,9 @@
 			children = (
 				1A769B5126621C9000FD7817 /* ipinfoTests.swift */,
 				1A769B5326621C9000FD7817 /* Info.plist */,
+				1A769C072663842400FD7817 /* FlowManagerTests.swift */,
+				1A769C2226638B1600FD7817 /* IpAddressInputValidatorTests.swift */,
+				1A769C412663922B00FD7817 /* MainViewModelTests.swift */,
 			);
 			path = ipinfoTests;
 			sourceTree = "<group>";
@@ -214,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				1A769B8C2662223E00FD7817 /* UIWindowExtension.swift */,
+				1A769C022663801B00FD7817 /* UIColorExtension.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -256,6 +276,14 @@
 				1A769BD2266243CB00FD7817 /* IPSearchResultModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1A769C1426638A9C00FD7817 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A769C1526638ACB00FD7817 /* InputValidator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		38BFB3961287B53AB44A2A03 /* Pods */ = {
@@ -470,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A769B872662210300FD7817 /* TypeAliases.swift in Sources */,
+				1A769C1626638ACB00FD7817 /* InputValidator.swift in Sources */,
 				1A769BFB2662C85000FD7817 /* Constants.swift in Sources */,
 				1A769BEC2662BBC200FD7817 /* IPDetailsViewModelProtocol.swift in Sources */,
 				1A769B922662227A00FD7817 /* MainRouter.swift in Sources */,
@@ -478,7 +507,6 @@
 				1A769BCA266242AE00FD7817 /* IPAPIProtocol.swift in Sources */,
 				1A769B9A2662252F00FD7817 /* MainViewFactory.swift in Sources */,
 				1A769B8D2662223E00FD7817 /* UIWindowExtension.swift in Sources */,
-				1A769B3F26621C8D00FD7817 /* ViewController.swift in Sources */,
 				1A769BAF2662343100FD7817 /* MainViewModelProtocol.swift in Sources */,
 				1A769BD3266243CB00FD7817 /* IPSearchResultModel.swift in Sources */,
 				1A769BD82662441C00FD7817 /* IPAPI.swift in Sources */,
@@ -489,6 +517,7 @@
 				1A769BE72662B4CF00FD7817 /* NetworkProtocol.swift in Sources */,
 				1A769BBC2662394A00FD7817 /* R.generated.swift in Sources */,
 				1A769BA02662260000FD7817 /* MainViewModel.swift in Sources */,
+				1A769C032663801B00FD7817 /* UIColorExtension.swift in Sources */,
 				1A769BF12662BBEA00FD7817 /* IPDetailsViewModel.swift in Sources */,
 				1A769BE22662B49A00FD7817 /* NetworkRequest.swift in Sources */,
 			);
@@ -498,7 +527,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A769C2E2663911F00FD7817 /* MainViewModelProtocol.swift in Sources */,
+				1A769C3D266391F300FD7817 /* IPAPIProtocol.swift in Sources */,
+				1A769C10266384FA00FD7817 /* TypeAliases.swift in Sources */,
+				1A769C1E26638AED00FD7817 /* InputValidator.swift in Sources */,
+				1A769C322663917700FD7817 /* IPSearchResultModel.swift in Sources */,
+				1A769C422663922B00FD7817 /* MainViewModelTests.swift in Sources */,
 				1A769B5226621C9000FD7817 /* ipinfoTests.swift in Sources */,
+				1A769C0C2663844900FD7817 /* FlowManager.swift in Sources */,
+				1A769C2326638B1600FD7817 /* IpAddressInputValidatorTests.swift in Sources */,
+				1A769C082663842400FD7817 /* FlowManagerTests.swift in Sources */,
+				1A769C39266391E400FD7817 /* MainViewModel.swift in Sources */,
+				1A769C46266394C100FD7817 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

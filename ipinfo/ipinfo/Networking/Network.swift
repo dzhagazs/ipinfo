@@ -31,9 +31,3 @@ class Network: NetworkProtocol {
             }
     }
 }
-
-class ErrorConstants {
-    static let decodeFail: Error = NSError(domain: "com.test.ipinfo", code: -3, userInfo: [NSLocalizedDescriptionKey: "Response decoding failed.", NSLocalizedFailureReasonErrorKey: "Response decoding failed."])
-    
-    static let emptyResponse: Error = NSError(domain: "com.test.ipinfo", code: -4, userInfo: [NSLocalizedDescriptionKey: "Empty response received.", NSLocalizedFailureReasonErrorKey: "Empty response received."])
-}
